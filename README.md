@@ -28,7 +28,7 @@ Layer based   -  Features inside layers.
 
 **Presentation**: The presentation layer manages user interfaces and interactions, focusing on the visual representation of data and user experience. It relies on the domain layer for business logic and the data layer for data retrieval, fostering a clear separation of concerns in the application architecture.
 
-![Folder Diagram](screenshots/folder_structure.png)
+![Folder Diagram](screenshots/folder_struture.png)
 
 ## What are all included
 
