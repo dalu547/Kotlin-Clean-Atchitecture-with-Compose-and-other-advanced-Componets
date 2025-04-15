@@ -1,5 +1,6 @@
 package com.digitele.template.navgraph
 
+import PostScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -25,6 +26,9 @@ fun AppNavigation() {
         }
         composable(AppRoute.Terms.route) {
             TermsScreen()
+        }
+        composable(AppRoute.Post.route) {
+            PostScreen()
         }
     }
 }

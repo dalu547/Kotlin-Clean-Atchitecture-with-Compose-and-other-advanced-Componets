@@ -58,16 +58,34 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
-    // Dependency Injection
+    // Dependency Injection - hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
 
-    // Logger
+    // Logger - Timer
     implementation(libs.timber)
 
     //Multidex
     implementation(libs.androidx.multidex)
+
+    //Retrofit - For http calls
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
+
+    //Moshi -- Json to/from model converter.
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.kotlin.codegen)
+
+
+    //okhttp3 logger
+    implementation(libs.logging.interceptor)
+
+    //State Flows
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.lifecycle.viewmodel.compose)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

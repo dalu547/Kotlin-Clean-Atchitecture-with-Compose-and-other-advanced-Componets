@@ -88,7 +88,11 @@ fun LoginScreen(mainAppNavController: NavHostController) {
 
             Button(
                 onClick = {
-                    mainAppNavController.navigate(AppRoute.Home.route) {
+//                    mainAppNavController.navigate(AppRoute.Home.route) {
+//                        popUpTo(AppRoute.Login.route) { inclusive = true } // Clear login from back stack
+//                    }
+
+                    mainAppNavController.navigate(AppRoute.Post.route) {
                         popUpTo(AppRoute.Login.route) { inclusive = true } // Clear login from back stack
                     }
                 },
