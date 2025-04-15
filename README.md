@@ -1,7 +1,7 @@
-## Flutter Scaffold Template
+## Kotlin Scaffold Template
 
 ## Overview
-This is a Flutter project developed as a technical test by **Dalayya Kalla**. The project focuses on **Folder struture, MVVM architecture and Lib integrations**.
+This is a Kotlin project developed as a technical test by **Dalayya Kalla**. The project focuses on **Folder struture, MVVM architecture and Lib integrations**.
 
 ## Table of Contents
 - [Architecture](#architecture)
