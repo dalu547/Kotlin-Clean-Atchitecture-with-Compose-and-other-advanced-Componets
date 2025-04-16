@@ -44,8 +44,11 @@ android {
 
 dependencies {
 
+    //Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    //Jetpack Compose - UI
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
@@ -53,8 +56,11 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.core.splashscreen)
+
+    //Jetpack Navigation
     implementation(libs.androidx.navigation.compose)
 
+    //Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
@@ -63,10 +69,10 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
 
-    // Logger - Timer
+    // Timer -- For Logging
     implementation(libs.timber)
 
-    //Multidex
+    //Multidex - For Scalability
     implementation(libs.androidx.multidex)
 
     //Retrofit - For http calls
@@ -82,14 +88,20 @@ dependencies {
     //okhttp3 logger
     implementation(libs.logging.interceptor)
 
-    //State Flows
+    //Viewmodel & State Flows
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.lifecycle.viewmodel.compose)
 
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.ksp)
 
+    //Unit & Instrumentation testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Compose UI Testing
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
