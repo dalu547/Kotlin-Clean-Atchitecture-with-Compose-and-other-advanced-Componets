@@ -35,18 +35,19 @@ Layer based   -  Features inside layers.
 - **Kotlin**: Core language
 - **MVVM** :  UI logic separation (ViewModel, View, Model)
 - **Clean Architecture** : Domain, Data, and Presentation layers
+- **Jetpack Compose**: UI
+- **Hilt**: Dependency Injection (To inject ViewModels, Repositories, UseCases, etc.)
 - **Coroutines** : For Asynchronous tasks
 - **Flows** : For State Management
-- **Hilt**: Dependency Injection (To inject ViewModels, Repositories, UseCases, etc.)
 - **Retrofit**: For Networking (HTTP client)
 - **Moshi** : JSON ↔️ Kotlin data classes.
 - **Coil**: Image loading library optimized for Compose
 - **Room**: Local Database
-- **Compose**: UI
 - **Navigation**: For in-app navigation
 - **WorkManager** : For background syncing & jobs
 - **Timber** : Better logging than Log.d()
- 
+- **Datastore** : For Key-Value pair saving.
+   
 
   
 

@@ -92,9 +92,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.lifecycle.viewmodel.compose)
 
+    //Room - database
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.ksp)
+
+     //Datastore -
+    implementation(libs.datastore.preferences)
 
     //Unit & Instrumentation testing
     testImplementation(libs.junit)
