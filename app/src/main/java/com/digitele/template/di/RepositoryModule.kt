@@ -1,5 +1,6 @@
 package com.digitele.template.di
 
+import com.digitele.template.data.datasource.local.PostDao
 import com.digitele.template.data.datasource.remote.MyApiService
 import com.digitele.template.data.repository.PostRepositoryImpl
 import com.digitele.template.domain.repository.PostRepository
@@ -13,6 +14,6 @@ import dagger.hilt.components.SingletonComponent
 object RepositoryModule {
 
     @Provides
-    fun providePostRepository(api: MyApiService): PostRepository =
-        PostRepositoryImpl(api)
+    fun providePostRepository(api: MyApiService , dao: PostDao): PostRepository =
+        PostRepositoryImpl(api,dao)
 }

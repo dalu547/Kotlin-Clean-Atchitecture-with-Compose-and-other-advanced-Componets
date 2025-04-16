@@ -7,6 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -18,14 +19,26 @@ class PostViewModel @Inject constructor(
     val postUiState: StateFlow<PostUiState> = _postUiState
 
     init {
+      getPostsFromServer()
+    }
+
+
+    private fun getPostsFromServer(){
         viewModelScope.launch {
             try {
+                  //get posts from network
                 val posts = repository.getPosts()
-                _postUiState.value = PostUiState.Success(posts)
+                //save to local database
+                repository.savePostsToLocal(posts)
+                //get posts from local database
+                val postsDB = repository.getPosts();
+                Timber.tag("LocalDB").d("Posts from DB: $postsDB")
+                _postUiState.value = PostUiState.Success(postsDB)
             } catch (e: Exception) {
                 _postUiState.value = PostUiState.Error(e.message ?: "Unknown error")
             }
         }
     }
+
 }
 
